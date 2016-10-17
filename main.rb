@@ -1,7 +1,7 @@
 class User
 
   def self.all
-    command = `psql -d test -c "SELECT * FROM users"`
+    command = `sqlite3 uncubed.db "SELECT * FROM companies;"`
     sql_results_parser command
   end
 
